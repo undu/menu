@@ -2,7 +2,7 @@
 
 # Menu
 
-**Menu** is a fish library to create interactive prompt menus.
+Create interactive prompt menus.
 
 ## Install
 
@@ -11,8 +11,6 @@ With [fisherman]
 ```
 fisher menu
 ```
-
-<img width="40%" src="https://cloud.githubusercontent.com/assets/8317250/14820969/d6d40c38-0c03-11e6-851e-6a927f7b9d3e.gif">
 
 ## Usage
 
@@ -27,84 +25,77 @@ menu 1 2 3
 
 ### `menu_cursor_glyph`
 
-Set cursor character. Default: `>`.
+Set cursor character.
+
+Default: `>`.
 
 ### `menu_cursor_glyph_style`
 
-Set cursor character style. Default: None.
+Set cursor character style.
+
+Default: None.
 
 ```fish
 set -l menu_cursor_glyph_style -o yellow
 ```
 
-### `menu_focused_item_style`
+### `menu_hover_item_style`
 
-Set focused item style. Default: None.
+Set hover item style.
+
+Default: None.
 
 ```fish
-set -l menu_focused_item_style -o black -b yellow
+set -l menu_hover_item_style -o black -b yellow
+```
+
+### `menu_multiple_choice`
+
+Enable multiple choice mode.
+
+Default: `false`.
+
+```fish
+set -l menu_multiple_choice true
 ```
 
 ### `menu_selected_item_style`
 
-Set selected item style. Default: None.
+Set selected item style.
+
+Default: None.
 
 ```fish
 set -l menu_selected_item_style -o black -b yellow
 ```
 
-### `menu_multiple`
-
-Enables multichoice mode. Default: None.
-
-```fish
-set -l menu_multiple 1
-```
-
 ### `menu_checked_glyph`
 
-If multichoice mode is enabled will display a checked box for selected value. Default: [x]
+Checked item glyph.
 
-```fish
-set -l menu_checked_glyph 💖
-```
+Default: `[x]`
 
 ### `menu_unchecked_glyph`
 
-If multichoice mode is enabled will display a unchecked box for not selected values. Default: [ ]
+Unchecked item glyph.
 
-```fish
-set -l menu_unchecked_glyph 💔
-```
-
-## Variables
-
-To know which item was selected, read either of the following scoped variables:
+Default: `[ ]`
 
 ### `menu_selected_index`
 
-Index of the selected item in `$argv`.
-
-### `menu_selected_item`
-
-Value of the selected item in `$argv`.
+Use `menu_selected_index` to retrieve the selected item index from `$argv`.
 
 ### Example
 
 ```fish
-function show_menu
-    set -l items "Batman" "Flash" "Superman" "Aquaman" "Darkseid"
+set -l items "Batman" "Flash" "Superman" "Aquaman"
 
-    set -l menu_selected_item_style -o black -b yellow
-    set -l menu_selected_glyph ▸
-    set -l menu_selected_glyph_style -o
+set -l menu_hover_item_style -o black -b yellow
+set -l menu_cursor_glyph ▶
+set -l menu_cursor_glyph_style -o
 
-    menu $items
-end
-
-show_menu
+menu $items
 ```
-
 
 [slack-link]: https://fisherman-wharf.herokuapp.com
 [slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
