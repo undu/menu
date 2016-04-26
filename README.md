@@ -12,7 +12,7 @@ With [fisherman]
 fisher menu
 ```
 
-<img width="60%" src="https://cloud.githubusercontent.com/assets/8317250/14820969/d6d40c38-0c03-11e6-851e-6a927f7b9d3e.gif">
+<img width="40%" src="https://cloud.githubusercontent.com/assets/8317250/14820969/d6d40c38-0c03-11e6-851e-6a927f7b9d3e.gif">
 
 ## Usage
 
