@@ -33,7 +33,7 @@ Set cursor character. Default: `>`.
 
 Set cursor character style. Default: None.
 
-```
+```fish
 set -l menu_selected_glyph_style -o yellow
 ```
 
@@ -41,13 +41,13 @@ set -l menu_selected_glyph_style -o yellow
 
 Set selected item style. Default: None.
 
-```
+```fish
 set -l menu_selected_item_style -o black -b yellow
 ```
 
 ## Variables
 
-To know the item was selected, read any of the following variables:
+To know which item was selected, read either of the following scoped variables:
 
 ### `menu_selected_index`
 
@@ -57,7 +57,7 @@ Index of the selected item in `$argv`.
 
 Value of the selected item in `$argv`.
 
-### Examples
+### Example
 
 ```fish
 function show_menu
