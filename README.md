@@ -25,16 +25,24 @@ menu 1 2 3
 
 ## Options
 
-### `menu_selected_glyph`
+### `menu_cursor_glyph`
 
 Set cursor character. Default: `>`.
 
-### `menu_selected_glyph_style`
+### `menu_cursor_glyph_style`
 
 Set cursor character style. Default: None.
 
 ```fish
-set -l menu_selected_glyph_style -o yellow
+set -l menu_cursor_glyph_style -o yellow
+```
+
+### `menu_focused_item_style`
+
+Set focused item style. Default: None.
+
+```fish
+set -l menu_focused_item_style -o black -b yellow
 ```
 
 ### `menu_selected_item_style`
@@ -43,6 +51,30 @@ Set selected item style. Default: None.
 
 ```fish
 set -l menu_selected_item_style -o black -b yellow
+```
+
+### `menu_multiple`
+
+Enables multichoice mode. Default: None.
+
+```fish
+set -l menu_multiple 1
+```
+
+### `menu_checked_glyph`
+
+If multichoice mode is enabled will display a checked box for selected value. Default: [x]
+
+```fish
+set -l menu_checked_glyph 💖
+```
+
+### `menu_unchecked_glyph`
+
+If multichoice mode is enabled will display a unchecked box for not selected values. Default: [ ]
+
+```fish
+set -l menu_unchecked_glyph 💔
 ```
 
 ## Variables
