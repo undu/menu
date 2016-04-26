@@ -29,16 +29,6 @@ Set cursor character.
 
 Default: `>`.
 
-### `menu_cursor_glyph_style`
-
-Set cursor character style.
-
-Default: None.
-
-```fish
-set -l menu_cursor_glyph_style -o yellow
-```
-
 ### `menu_hover_item_style`
 
 Set hover item style.

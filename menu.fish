@@ -34,7 +34,7 @@ function -S menu
             end
 
             if test "$i" = "$row_index"
-                set -l glyph "$cursor_glyph_style$cursor_glyph$normal"
+                set -l glyph "$cursor_glyph"
                 set -l item "$hover_item_style$argv[$i]$normal"
 
                 __menu_move_print $i 1 "$glyph $before$item"
@@ -53,7 +53,6 @@ function -S menu
     set menu_selected_index
 
     set -l cursor_glyph ">"
-    set -l cursor_glyph_style
 
     set -l checked_glyph "[x]"
     set -l unchecked_glyph "[ ]"
@@ -70,11 +69,6 @@ function -S menu
 
     if test ! -z "$menu_cursor_glyph"
         set cursor_glyph "$menu_cursor_glyph"
-    end
-
-    if test ! -z "$menu_cursor_glyph_style"
-        set cursor_glyph_style (set_color $menu_cursor_glyph_style)
-        set normal (set_color normal)
     end
 
     if test ! -z "$menu_hover_item_style"
