@@ -12,7 +12,7 @@ With [fisherman]
 fisher menu
 ```
 
-![menu](https://cloud.githubusercontent.com/assets/8317250/14814942/8e172e96-0be3-11e6-86df-72e698c78919.gif)
+![](https://cloud.githubusercontent.com/assets/8317250/14820969/d6d40c38-0c03-11e6-851e-6a927f7b9d3e.gif)
 
 ## Usage
 
