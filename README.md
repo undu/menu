@@ -35,7 +35,7 @@ Set hover item style.
 
 Default: None.
 
-### `menu_multiple_choice`
+### `menu_multiple_choice`
 
 Enable multiple choice mode.
 
@@ -54,7 +54,7 @@ Checked item glyph.
 
 Default: `[x]`
 
-### `menu_unchecked_glyph`
+### `menu_unchecked_glyph`
 
 Unchecked item glyph.
 
