@@ -35,29 +35,18 @@ Set hover item style.
 
 Default: None.
 
-```fish
-set -l menu_hover_item_style -o black -b yellow
-```
-
 ### `menu_multiple_choice`
 
 Enable multiple choice mode.
 
 Default: `false`.
 
-```fish
-set -l menu_multiple_choice true
-```
 
 ### `menu_selected_item_style`
 
 Set selected item style.
 
 Default: None.
-
-```fish
-set -l menu_selected_item_style -o black -b yellow
-```
 
 ### `menu_checked_glyph`
 
