@@ -90,11 +90,11 @@ function -S menu
     set -l row_index 1
 
     if test ! -z "$menu_selected_index"
-        set row_index "$menu_selected_index"
+        set row_index "$menu_selected_index[-1]"
     end
 
     set -g menu_selected_index
-    
+
     set -l item_count (count $argv)
 
     tput civis
