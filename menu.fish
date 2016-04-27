@@ -93,7 +93,7 @@ function -S menu
         set row_index "$menu_selected_index[-1]"
     end
 
-    set -g menu_selected_index
+    set menu_selected_index
 
     set -l item_count (count $argv)
 
