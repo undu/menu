@@ -50,8 +50,6 @@ function -S menu
         end
     end
 
-    set menu_selected_index
-
     set -l cursor_glyph ">"
 
     set -l checked_glyph "[x]"
@@ -90,6 +88,13 @@ function -S menu
     end
 
     set -l row_index 1
+
+    if test ! -z "$menu_selected_index"
+        set row_index "$menu_selected_index"
+    end
+
+    set -g menu_selected_index
+    
     set -l item_count (count $argv)
 
     tput civis
@@ -97,7 +102,7 @@ function -S menu
 
     __menu_fullscreen --enter
 
-    __menu_draw_items 1 $argv
+    __menu_draw_items "$row_index" $argv
 
     while true
         dd bs=1 count=1 ^ /dev/null | read -p "" -l c
