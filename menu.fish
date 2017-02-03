@@ -1,4 +1,4 @@
-function -S menu
+function menu -S 
     if test -z "$argv"
         return 1
     end
@@ -20,7 +20,7 @@ function -S menu
         end
     end
 
-    function -S __menu_draw_items -a row_index
+    function __menu_draw_items -S -a row_index
         set -e argv[1]
         set -l before ""
 
