@@ -1,4 +1,4 @@
-function menu -S 
+function menu -S
     if test -z "$argv"
         return 1
     end
